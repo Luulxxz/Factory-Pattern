@@ -70,5 +70,6 @@ try{
 catch(Exception $e){
     // Exibe a mensagem de erro
     print "ERRO!:". $e->getMessage(). "<br>\n";
+    die();
 }
 ?>
