@@ -28,9 +28,16 @@
             throw new Exception("Arquivo. '$name' não encontrado");
         }
 
-    }
+        // Lê os arquivos e grava as informações contidas neles
+        $user = isset($db['user']) ? $db['user'] :'NULL';
+        $pass = isset($db['pass']) ? $db['pass'] :'NULL';
+        $name = isset($db['name']) ? $db['name'] :'NULL';
+        $host = isset($db['host']) ? $db['host'] :'NULL';
+        $type = isset($db['type']) ? $db['type'] :'NULL';
+        $port = isset($db['port']) ? $db['port'] :'NULL';
 
- }
+    }
+}
  
  
 
