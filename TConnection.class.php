@@ -37,6 +37,19 @@
         $port = isset($db['port']) ? $db['port'] :'NULL';
 
     }
+
+    // Descobre qual o tipo de (driver) banco de dados a ser utilizado
+    switch($type){
+        case 'pgsql':
+            $port = $port ? $port : '5432';
+            $conn = new PDO('pgsql:dbname={$name}; user={$user}; password={$password}; host=$host; port={$host}');
+            break;
+
+        case 'mysql':
+            $port = $port ? $port : '3306';
+            
+
+    }
 }
  
  
